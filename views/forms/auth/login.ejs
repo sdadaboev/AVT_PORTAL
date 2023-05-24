@@ -47,12 +47,15 @@
             }
             function showMobileMessage() {
                 var messageElement = document.createElement('div');
-                messageElement.innerHTML = 'Пожалуйста, посетите сайт с компьютера для полного функционала.';
+               
                 messageElement.innerHTML = "Barcha funksionallikni ko'rish uchun saytga kompyuter orqali kiring";
-                // Добавьте стили для сообщения, чтобы оно выглядело как вам нужно
-                // Например: messageElement.style.backgroundColor = 'red';
                 
-                // Добавьте сообщение на вашу страницу или в нужное место
+                messageElement.innerHTML = 'Пожалуйста, посетите сайт с компьютера для полного функционала.';
+                messageElement.style.backgroundColor = 'red'; // Установите цвет фона
+                messageElement.style.color = 'white'; // Установите цвет текста
+                messageElement.style.padding = '10px'; // Добавьте отступы
+                messageElement.style.fontFamily = 'Arial, sans-serif'; // Установите шрифт
+                
                 document.body.style.display = 'none';
                 document.body.appendChild(messageElement);
             }       
