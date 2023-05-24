@@ -48,10 +48,12 @@
             function showMobileMessage() {
                 var messageElement = document.createElement('div');
                 messageElement.innerHTML = 'Пожалуйста, посетите сайт с компьютера для полного функционала.';
+                messageElement.innerHTML = "Barcha funksionallikni ko'rish uchun saytga kompyuter orqali kiring";
                 // Добавьте стили для сообщения, чтобы оно выглядело как вам нужно
                 // Например: messageElement.style.backgroundColor = 'red';
                 
                 // Добавьте сообщение на вашу страницу или в нужное место
+                document.body.style.display = 'none';
                 document.body.appendChild(messageElement);
             }       
             if (isMobileDevice()) {
