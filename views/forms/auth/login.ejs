@@ -45,28 +45,32 @@
             function isMobileDevice() {
                 return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             }
-            function showMobileMessage() {
+                function showMobileMessage() {
+                    let container = document.createElement('div');
+                    container.style.width = '100%';
+                    container.style.height = '100vh';
+                    container.style.display = 'flex';
+                    container.style.justifyContent = 'center';
+                    container.style.alignItems = 'center';
+
+                    // Создание элемента с текстом
+                    var text = document.createElement('div');
+                    text.textContent = 'Iltimos kompyuter orqali kiring';
+                    text.style.textAlign = 'center';
+                    text.style.fontSize = '24px';
+                    text.style.fontWeight = 'bold';
+
+                    // Добавление элемента с текстом внутрь контейнера
+                    container.appendChild(text);
+
+                    // Добавление контейнера внутрь элемента body
+                    document.body.appendChild(container);
                 
-                
-                document.body.style.display = 'none';
-                let messageElement = document.createElement('div');
-               
-                messageElement.innerHTML = "Barcha funksionallikni ko'rish uchun saytga kompyuter orqali kiring";
-                
-                messageElement.innerHTML = 'Пожалуйста, посетите сайт с компьютера для полного функционала.';
-                messageElement.style.backgroundColor = 'red'; // Установите цвет фона
-                messageElement.style.color = 'white'; // Установите цвет текста
-                messageElement.style.padding = '10px'; // Добавьте отступы
-                messageElement.style.fontFamily = 'Arial, sans-serif'; // Установите шрифт
-                document.documentElement.style.display = 'none';
-                document.body.appendChild(messageElement);
-                window.addEventListener('load', function () {
-                document.documentElement.style.display = 'block';
-            });
-            }       
-            if (isMobileDevice()) {
-                showMobileMessage();
-            }
+                  
+                }       
+                if (isMobileDevice()) {
+                    showMobileMessage();
+                }
        </script>
     </body>
 </html>
