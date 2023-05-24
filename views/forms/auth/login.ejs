@@ -52,21 +52,19 @@
                     container.style.display = 'flex';
                     container.style.justifyContent = 'center';
                     container.style.alignItems = 'center';
-
-                    // Создание элемента с текстом
+                    container.style.position = 'fixed';
+                    container.style.top = '0';
+                    container.style.left = '0';
+                    container.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+                    container.style.zIndex = '999';
                     var text = document.createElement('div');
                     text.textContent = 'Iltimos kompyuter orqali kiring';
                     text.style.textAlign = 'center';
                     text.style.fontSize = '24px';
                     text.style.fontWeight = 'bold';
-
-                    // Добавление элемента с текстом внутрь контейнера
                     container.appendChild(text);
 
-                    // Добавление контейнера внутрь элемента body
                     document.body.appendChild(container);
-                
-                  
                 }       
                 if (isMobileDevice()) {
                     showMobileMessage();
