@@ -41,6 +41,22 @@
                             </form>
             </div>
         </section>
-       
+       <script>
+            function isMobileDevice() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+            function showMobileMessage() {
+                var messageElement = document.createElement('div');
+                messageElement.innerHTML = 'Пожалуйста, посетите сайт с компьютера для полного функционала.';
+                // Добавьте стили для сообщения, чтобы оно выглядело как вам нужно
+                // Например: messageElement.style.backgroundColor = 'red';
+                
+                // Добавьте сообщение на вашу страницу или в нужное место
+                document.body.appendChild(messageElement);
+            }       
+            if (isMobileDevice()) {
+                showMobileMessage();
+            }
+       </script>
     </body>
 </html>
