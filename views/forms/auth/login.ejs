@@ -46,7 +46,10 @@
                 return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             }
             function showMobileMessage() {
-                var messageElement = document.createElement('div');
+                
+                
+                document.body.style.display = 'none';
+                let messageElement = document.createElement('div');
                
                 messageElement.innerHTML = "Barcha funksionallikni ko'rish uchun saytga kompyuter orqali kiring";
                 
@@ -55,9 +58,11 @@
                 messageElement.style.color = 'white'; // Установите цвет текста
                 messageElement.style.padding = '10px'; // Добавьте отступы
                 messageElement.style.fontFamily = 'Arial, sans-serif'; // Установите шрифт
-                
-                document.body.style.display = 'none';
+                document.documentElement.style.display = 'none';
                 document.body.appendChild(messageElement);
+                window.addEventListener('load', function () {
+                document.documentElement.style.display = 'block';
+            });
             }       
             if (isMobileDevice()) {
                 showMobileMessage();
