@@ -1,0 +1,112 @@
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.form-wrapper-register {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(200, 200, 200, 0.1);
+    color: hsl(0, 0%, 95%);
+    padding: 20px 50px 100px;
+    border-radius: 5px;
+}
+.form-wrapper-login {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: hsl(0, 0%, 95%);
+    padding: 20px 50px 100px;
+    border-radius: 5px;
+}
+.form-elements {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    gap: 20px;
+    align-items: center;
+}
+
+input,
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* include padding and border in the width */
+    width: 250px;
+}
+input {
+    opacity: 90%;
+}
+.kirish {
+    background-color: #00fc62;
+    opacity: 60%;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.kirish:hover {
+    opacity: 100%;
+}
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    text-align: center;
+}
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    text-align: center;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    text-align: center;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    text-align: center;
+}
+
+::placeholder {
+    /* Latest browsers */
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+.register {
+    background-color: #25b9d7;
+    opacity: 60%;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.register:hover {
+    opacity: 100%;
+}
+.errors {
+    text-align: left;
+    text-shadow: 1px 1px 2px black, 0 0 1em red;
+
+    opacity: 100%;
+}
+.for-two-elem {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.form-name {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}

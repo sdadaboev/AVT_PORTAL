@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/header/head') %>
+        <link rel="stylesheet" href="/css/skills.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <h3>Bizning yo'nalishda quyidagi skillarni olishingiz mumkin</h3>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    Adobe Illustration
+                    <img
+                        class="swiper-image"
+                        src="/img/ai_2.jpg"
+                        alt="image was here"
+                    />
+                </div>
+                <div class="swiper-slide">
+                    Unreal Engine
+                    <img
+                        class="swiper-image"
+                        src="/img/AR_VR_person_with_VR_headset.original.png"
+                        alt=""
+                    />
+                </div>
+                <div class="swiper-slide">
+                    Adobe Photoshop
+                    <img
+                        class="swiper-image"
+                        src="/img/Getting_Started_with_Adobe_Photoshop-BlogHeader.avif"
+                        alt=""
+                    />
+                </div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+        <script src="/js/swiper.js"></script>
+    </body>
+</html>

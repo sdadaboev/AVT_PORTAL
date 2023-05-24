@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../../partials/header/head.ejs') %>
+        <link rel="stylesheet" href="/css/home.css" />
+        <link rel="stylesheet" href="/css/header.css" />
+        <link rel="stylesheet" href="/css/loyihalar.css" />
+    </head>
+    <body>
+        <%- include('../../partials/header.ejs') %>
+        <section class="loyihalar-section">
+            <div class="file-section">
+                <div class="file-links-class">
+                    <ul class="file-links-ul">
+                        <a href="http://localhost:3000/project/3dsmax">
+                            <li>3DS MAX</li>
+                        </a>
+
+                        <a href="http://localhost:3000/project/unreal">
+                            <li>UNREAL ENGINE</li>
+                        </a>
+                        <a href="http://localhost:3000/project-figma/figma">
+                            <li>FIGMA</li>
+                        </a>
+                        <a
+                            href="http://localhost:3000/project-premier-pro/premier-pro"
+                        >
+                            <li>ADOBE PREMIER PRO</li>
+                        </a>
+                        <a
+                            href="http://localhost:3000/project-illustrator/illustrator"
+                        >
+                            <li>ADOBE ILLUSTRATOR</li>
+                        </a>
+                        <a href="http://localhost:3000/project-corel/corel">
+                            <li>COREL DRAW</li>
+                        </a>
+                        <a
+                            href="http://localhost:3000/project-photoshop/photoshop"
+                        >
+                            <li>ADOBE PHOTOSHOP</li>
+                        </a>
+                        <a
+                            href="http://localhost:3000/project-after-effects/after-effects"
+                        >
+                            <li>ADOBE AFTER EFFECTS</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="projects">
+                    <div class="project-block">
+                        <% if(!files || files.length === 0) { %>
+                        <div class="files-empty">
+                            <div class="image">
+                                <p>
+                                    Hozircha Figma bo'yicha loyihalar mavjud
+                                    emas!
+                                </p>
+                            </div>
+                        </div>
+                        <%} else { %> <% files.forEach((file, index)=> {%>
+
+                        <div class="img-block"></div>
+                        <div class="text-block">
+                            <ul class="project_files_ul">
+                                <li class="project_files_li">
+                                    <p class="projectFileName">
+                                        <%= file.projectFileName %>
+                                    </p>
+                                    <p class="projectText">
+                                        <%= file.projectText %>
+                                    </p>
+                                    <button class="upload_button_see">
+                                        <a
+                                            href="<%= file.projectPath %>"
+                                            download
+                                            target="_blank"
+                                            >Ko'rish</a
+                                        >
+                                    </button>
+
+                                    <button class="upload_button_upload">
+                                        <a
+                                            href="/project-figma/download/<%= file._id%>"
+                                            >Yuklash</a
+                                        >
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <% }) %> <%}%>
+                    </div>
+                </div>
+                <div class="uploading">
+                    <div class="uploading-text">
+                        Figma boyicha bajargan loyihalaringizni platformaga
+                        joylashtirishingiz mumkin
+                    </div>
+                    <div class="uploading-files-block">
+                        <div class="upload-file-button-block">
+                            <button class="upload-file" id="openModalButton">
+                                Loyihamni joylash
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modalContainer">
+                <div id="modalContent">
+                    <h2>Mening 3DS MAX loyiham</h2>
+                    <form
+                        class="upload-form"
+                        id="fileForm"
+                        action="http://localhost:3000/project-figma/uploadFigma"
+                        method="post"
+                        enctype="multipart/form-data"
+                    >
+                        <input
+                            class="projectTitle-input"
+                            type="text"
+                            placeholder="Loyiha nomi"
+                            name="projectTitle"
+                            required
+                        />
+
+                        <textarea
+                            class="projectText-textarea"
+                            name="projectText"
+                            placeholder="Loyiha haqida ta'rif berishingiz mumkin"
+                            name=""
+                            id=""
+                            cols="30"
+                            rows="10"
+                        ></textarea>
+                        <input
+                            class="button-upload-file-input"
+                            name="projectFile"
+                            type="file"
+                            required
+                            accept="*/*"
+                        />
+                        <button class="button-upload-submit" type="submit">
+                            Joylash
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="file-footer">
+                <p>
+                    Haq yo‘linda kim senga bir harf o‘qitmish ranj ila, Aylamak
+                    bo‘lmas ado, oning haqin yuz ganch ila. ( Alisher Navoiy)
+                </p>
+            </div>
+        </section>
+        <script>
+            const openModalButton = document.getElementById('openModalButton')
+            const modalContainer = document.getElementById('modalContainer')
+
+            openModalButton.addEventListener('click', function () {
+                modalContainer.style.display = 'block'
+            })
+
+            modalContainer.addEventListener('click', function (event) {
+                if (event.target === modalContainer) {
+                    modalContainer.style.display = 'none'
+                }
+            })
+            // const fileForm = document.getElementById('fileForm')
+
+            // fileForm.addEventListener('submit', function (event) {
+            //     event.preventDefault() // Предотвращаем отправку формы (для примера)
+
+            //     // Ваш код для обработки отправки формы
+
+            //     // Скрываем модальное окно после отправки формы
+            //     modalContainer.style.display = 'none'
+            // })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/header/head') %>
+        <link rel="stylesheet" href="/css/home.css" />
+        <link rel="stylesheet" href="/css/header.css" />
+        <link rel="stylesheet" href="/css/talimOlish.css" />
+        <link rel="stylesheet" href="/css/courses.css" />
+    </head>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <section class="edu-section">
+            <div class="edu-wrapper">
+                <div class="sidebar">
+                    <div class="edu-links-div">
+                        <ul class="edu-links-ul">
+                            <div class="edu-link-div-courses">
+                                <li class="edu-links-li">
+                                    <a
+                                        class="edu-links-a"
+                                        href="http://localhost:3000/course/3dsmax"
+                                        >3DS Max</a
+                                    >
+                                    <img
+                                        class="study-links-icon"
+                                        src="/icons/studyLinks/3dmax.png"
+                                        alt=""
+                                    />
+                                </li>
+                            </div>
+                            <div class="edu-link-div-courses">
+                                <li class="edu-links-li">
+                                    <a
+                                        class="edu-links-a"
+                                        href="http://localhost:3000/course/unreal-engine"
+                                        >Unreal Engine</a
+                                    >
+                                    <img
+                                        class="study-links-icon"
+                                        src="/icons/studyLinks/unreal.png"
+                                        alt=""
+                                    />
+                                </li>
+                            </div>
+                            <div class="edu-link-div-courses">
+                                <li class="edu-links-li">
+                                    <a
+                                        class="edu-links-a"
+                                        href="http://localhost:3000/course/figma"
+                                        >Figma</a
+                                    >
+                                    <img
+                                        class="study-links-icon"
+                                        src="/icons/studyLinks/figma.png"
+                                        alt=""
+                                    />
+                                </li>
+                            </div>
+                            <div class="edu-link-div-courses">
+                                <li class="edu-links-li">
+                                    <a
+                                        class="edu-links-a"
+                                        href="http://localhost:3000/course/adobe-illustrator"
+                                        >Adobe Illustrator</a
+                                    >
+                                    <img
+                                        class="study-links-icon"
+                                        src="/icons/studyLinks/illustrator.png"
+                                        alt=""
+                                    />
+                                </li>
+                            </div>
+                            <div class="edu-link-div-courses">
+                                <li class="edu-links-li">
+                                    <a
+                                        class="edu-links-a"
+                                        href="http://localhost:3000/course/adobe-premier-pro"
+                                        >Adobe Premier Pro</a
+                                    >
+                                    <img
+                                        class="study-links-icon"
+                                        src="/icons/studyLinks/premier.png"
+                                        alt=""
+                                    />
+                                </li>
+                            </div>
+                            <div class="edu-link-div-courses">
+                                <li class="edu-links-li">
+                                    <a
+                                        class="edu-links-a"
+                                        href="http://localhost:3000/course/adobe-photoshop"
+                                        >Adobe Photoshop</a
+                                    >
+                                    <img
+                                        class="study-links-icon"
+                                        src="/icons/studyLinks/PS.png"
+                                        alt=""
+                                    />
+                                </li>
+                            </div>
+                            <div class="edu-link-div-courses">
+                                <li class="edu-links-li">
+                                    <a
+                                        class="edu-links-a"
+                                        href="http://localhost:3000/course/corel-draw"
+                                        >Corel Draw</a
+                                    >
+                                    <img
+                                        class="study-links-icon"
+                                        src="/icons/studyLinks/corel.png"
+                                        alt=""
+                                    />
+                                </li>
+                            </div>
+                            <div class="edu-link-div-courses">
+                                <li class="edu-links-li">
+                                    <a
+                                        class="edu-links-a"
+                                        href="http://localhost:3000/course/adobe-after-effects"
+                                        >Adobe after effects</a
+                                    >
+                                    <img
+                                        class="study-links-icon"
+                                        src="/icons/studyLinks/after.png"
+                                        alt=""
+                                    />
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="courses-bar">
+                    <% allCourses.forEach((course) => { %>
+                    <div class="iframe-video">
+                        <iframe
+                            class="iframe"
+                            src="<%= course.youtubePlaylistURL %>"
+                            ,
+                            frameborder="0"
+                            allowfullscreen
+                        ></iframe>
+                        <div class="course-text">
+                            <p class="name"><%= course.name %></p>
+                            <p class="language">
+                                Ta'lim tili: <%= course.language %>
+                            </p>
+                            <p class="year">yil: <%= course.year %></p>
+                            <p class="manba">manba: <%= course.manba %></p>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

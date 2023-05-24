@@ -1,0 +1,35 @@
+.edu-links-div {
+    background-color: hsla(240, 3%, 12%, 0.75);
+    opacity: 80%;
+    border-radius: 15px;
+}
+.container-header {
+    background-color: hsla(240, 3%, 12%, 0.75);
+    opacity: 80%;
+    border-radius: 15px;
+}
+.header-links a {
+    color: #fff;
+    opacity: 100%;
+}
+.portal {
+    color: #fff;
+    opacity: 100%;
+}
+.edu-links-a {
+    font-family: Sora, sans-serif;
+    color: #fff;
+    opacity: 80%;
+}
+.edu-links-li:hover {
+    background-color: hsl(194, 96%, 72%);
+
+    opacity: 100%;
+    transform: scale(1.1);
+}
+.edu-link-div:hover {
+    background-color: hsl(192, 15%, 13%);
+    padding: 0px 5px;
+    opacity: 100%;
+    transform: scale(1.1);
+}

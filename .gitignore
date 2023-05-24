@@ -1,0 +1,4 @@
+.env
+package-lock.json
+read_before-production.txt
+node_modules/

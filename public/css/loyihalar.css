@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500&display=swap');
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.file-links-ul {
+    list-style: none;
+    border-right: 1px solid black;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    max-width: 250px;
+}
+ul.file-links-ul li {
+    /* border: 1px solid black; */
+    padding: 10px;
+    max-width: 250px;
+}
+.file-section {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1.3fr;
+    padding: 20px;
+    grid-gap: 20px;
+    height: 70vh;
+    /* border: 1px solid red; */
+}
+
+.file-footer {
+    display: flex;
+    align-items: flex-end;
+    height: 10vh;
+}
+.designer-sitting .image {
+    display: flex;
+    flex-direction: row;
+    background-image: url('../img/loyihalar/01323190cd6933de96287a5804fd636a.gif');
+    background-position: center;
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* border: 1px solid black; */
+    background-color: #fbfbfb;
+}
+.image p {
+    font-size: 30px;
+    margin: auto;
+}
+.files-empty .image {
+    display: flex;
+    flex-direction: row;
+    background-image: url('../img/loyihalar/empty.avif');
+    background-position: center;
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* border: 1px solid black; */
+    /* background-color: #fbfbfb; */
+    opacity: 80%;
+}
+
+#modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Скрываем модальное окно по умолчанию */
+}
+
+#modalContent {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 30px;
+}
+.project_files_ul {
+    list-style: decimal;
+}
+.project_files_li {
+    border-bottom: 1px solid black;
+    max-width: 800px;
+    word-wrap: break-word;
+    list-style: none;
+    padding-bottom: 10px;
+}
+.projects {
+    overflow: scroll;
+}
+.uploading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-image: url('../img/images.jfif');
+    background-repeat: no-repeat;
+    opacity: 95%;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    color: #fff;
+    overflow: auto;
+}
+.uploading-text {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    /* border: 1px solid black; */
+    padding: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    word-wrap: break-word;
+}
+.upload-file-button-block {
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.upload-file {
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Sora;
+    background-color: rgb(7, 56, 210, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+.upload-file:hover {
+    background-color: rgba(52, 52, 99, 0.8);
+}
+.projectFileName {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(7, 56, 210, 0.8);
+}
+.projectText {
+    letter-spacing: 1px;
+}
+
+.upload_button_see,
+.upload_button_upload {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+.upload_button_upload {
+    background-color: rgb(123, 250, 111);
+}
+.upload_button_see {
+    background-color: rgb(149, 232, 238);
+}
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.projectTitle-input {
+    padding: 10px;
+    border: 1px solid rgb(123, 250, 111);
+}
+.button-upload-submit {
+    width: 150px;
+    padding: 10px 20px;
+    background-color: rgb(123, 250, 111);
+    border: none;
+    border-radius: 5px;
+    font-family: Sora;
+    font-weight: 600;
+    color: rgb(9, 53, 5);
+    cursor: pointer;
+    align-self: flex-end;
+}
+.projectText-textarea {
+    padding: 10px;
+    border: 1px solid rgb(123, 250, 111);
+}
+.button-upload-file-input {
+    cursor: pointer;
+    background-color: rgb(123, 250, 111, 0.3);
+}

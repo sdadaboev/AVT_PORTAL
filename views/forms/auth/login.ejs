@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../../partials/header/head') %>
+        <link rel="stylesheet" href="/css/mainPage.css">
+    </head>
+    <body>
+        <section class="mainpage">
+            <div class="video-wrapper">
+                <video autoplay muted loop id="myVideo">
+                    <source src="/videos/loginVideo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="form-wrapper-login">
+                            <form class="form-elements" action="http://localhost:3000/auth/login" method="post">
+                                <h3 class="form-name">Tizimga kirish</h3>
+                                <div class="form-elements">
+                                    <input
+                                    type="text"
+                                    name="username"
+                                    placeholder="Foydalanuvchi nomi"
+                                    required
+                                    autocomplete="on"
+                                    />
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        placeholder="Parol"
+                                        readonly
+                                        onfocus="this.removeAttribute('readonly')"
+                                    />
+                                    <button class="kirish" type="submit">Tizimga kirish</button>
+                                    yoki
+                                    <button class="register"><a href="/auth/registration">Ro'yxatdan o'tish</a></button>
+                                </div>
+                                <div class="errors">
+                                    <% if(message) {%>
+                                        <%= message %></p>
+                                    <%}%>
+                                </div>
+                            </form>
+            </div>
+        </section>
+       
+    </body>
+</html>

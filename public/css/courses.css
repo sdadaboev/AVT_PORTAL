@@ -1,0 +1,44 @@
+body {
+    background-image: url('../img/puzirki.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.courses-bar {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background-image: url('../img/yaCZUq.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    width: 79vw;
+    height: 80vh;
+}
+.iframe {
+    width: 450px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.iframe-video {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* padding-left: 20px; */
+    transition: 0.3s;
+    word-wrap: break-word;
+    background-color: rgba(240, 230, 230, 0.2);
+}
+.iframe-video:hover {
+    box-shadow: rgba(37, 163, 236, 0.56) 0px 22px 70px 4px;
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+.course-text {
+    text-align: center;
+    width: 450px;
+    word-wrap: break-word;
+}
+.name {
+    font-weight: bold;
+}

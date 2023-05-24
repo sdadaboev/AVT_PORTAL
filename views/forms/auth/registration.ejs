@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../../partials/header/head') %>
+        <link rel="stylesheet" href="/css/mainPage.css">
+    </head>
+    <body>
+        <div class="video-wrapper">
+                <video autoplay muted loop id="myVideo">
+                    <source src="/videos/registerVideo.mp4" type="video/mp4">
+                </video>
+            </div>
+        <div class="form-wrapper-register">
+            <form 
+            class="form-elements"
+            action="http://localhost:3000/auth/registration"
+            method="post"
+            autocomplete="off"
+        >
+            <h3 class="form-name">Registratsiya</h3>
+            <input
+                type="text"
+                name="username"
+                placeholder="Foydalanuvchi nomi"
+                required
+            />
+
+            <div class="for-two-elem">
+                <input type="text" name="name" placeholder="F.I.O" />
+            <input type="text" name="surname" placeholder="Guruh" />
+            </div>
+            <div class="for-two-elem">
+                <input
+                type="password"
+                name="password"
+                placeholder="Parol"
+                autocomplete="false"
+                readonly
+                onfocus="this.removeAttribute('readonly')"
+                required
+            />
+            <input
+                type="password"
+                name="confirm_password"
+                placeholder="Parolni qayta kiriting"
+                required
+                readonly
+                onfocus="this.removeAttribute('readonly')"
+            />
+            </div>
+
+            <div class="for-two-elem">
+                <button class="kirish" type="submit">Ro'yxatdan o'tish</button>
+            <button class="register"><a href="/auth/login">Tizimga kirish</a></button>
+            </div>
+            
+            <div class="errors">
+                <% if(errors) {%>
+                  <% for(let i = 0; i<errors.length; i++) {%>
+                    <p><%= errors[i]['msg'] %></p>
+                 <%}%>
+            <%}%>
+            <% if(message) {%>
+                    <p><%= message %></p>
+            <%}%>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>

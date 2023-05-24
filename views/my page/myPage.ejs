@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/header/head') %>
+        <link rel="stylesheet" href="/css/home.css" />
+        <link rel="stylesheet" href="/css/header.css" />
+
+        <script
+            src="https://kit.fontawesome.com/46b19517a3.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main>
+            <div class="container">
+                <div class="body-wrapper">
+                    <div class="body-text">
+                        <p class="body-little-text">TALABALAR UCHUN</p>
+                        <p class="main-body-text">
+                            Audiovizual <br />
+                            texnologiyalari <br />
+                            yo'nalishi <br />
+                            portali
+                        </p>
+                        <button class="button-xazina">
+                            <a class="xazinaga" href="/home/xazinaga"
+                                >Xazinaga</a
+                            >
+                        </button>
+                    </div>
+                    <div class="body-slider">
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <img src="/img/bodySlider/merlin.jpg" />
+                                <p>Kompyuter grafikasi</p>
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="/img/bodySlider/photoshop.jpg" />
+                                <p>
+                                    <a
+                                        href="https://www.adobe.com/ru/products/photoshop.html"
+                                        >Adobe Photoshopda tasvirlar bilan
+                                        ishlash</a
+                                    >
+                                </p>
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="/img/bodySlider/figma.jpg" />
+                                <p>Figmada dizayn va prototiplash</p>
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="/img/bodySlider/illustrator.jpg" />
+                                <p>Adobe Illustratorda vektor dizayn</p>
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="/img/bodySlider/3dmax.avif" />
+                                <p>3DSMax da 3D obyektlar bilan ishlash</p>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <img src="/img/bodySlider/unreal2.jpg" />
+                                <p>Unreal Engine dasturida o'yin</p>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <img src="/img/bodySlider/unreal.jpg" />
+                                <p>Unreal Engine dasturida Interier dizayn</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="/js/body-slider.js"></script>
+    </body>
+</html>
