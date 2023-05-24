@@ -7,7 +7,7 @@ import { check } from 'express-validator'
 import { LoginGet } from '../../controllers/auth/loginController.js'
 import { checkToken } from '../../middlewares/authMiddlewares.js'
 const authRouter = Router()
-
+authRouter.get('/', LoginGet)
 authRouter.get('/login', LoginGet)
 authRouter.post('/login', Login, checkToken, getMainPage)
 authRouter.get('/registration', RegistrationForGet)

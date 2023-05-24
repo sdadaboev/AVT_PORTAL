@@ -14,7 +14,7 @@ import projectRouterPhotoshop from './projects/photoshsopRouter/photoshsopRouter
 import projectRouterAfterEffects from './projects/afterEffectsProjectRouter/afterEffectsProjectRouter.js'
 
 const allRouter = Router()
-
+allRouter.use('/', authRouter)
 allRouter.use('/auth', authRouter)
 allRouter.use('/admin', adminRouter)
 allRouter.use('/user', userRouter)
