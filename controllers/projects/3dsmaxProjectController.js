@@ -14,7 +14,7 @@ export const project3DSMAX = async (req, res, next) => {
         const fileToMongoDB = await threeDSMAX.create(file)
 
         console.log('file is uploaded: ', fileToMongoDB)
-        res.redirect('http://localhost:3000/project/3dsmax')
+        res.redirect('/project/3dsmax')
     } catch (error) {
         console.log(error)
     }

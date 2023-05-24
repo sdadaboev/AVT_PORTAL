@@ -14,7 +14,7 @@ export const projectUnreal = async (req, res, next) => {
         const fileToMongoDB = await unrealProjectScheme.create(file)
 
         console.log('file is uploaded: ', fileToMongoDB)
-        res.redirect('http://localhost:3000/project/unreal')
+        res.redirect('/project/unreal')
     } catch (error) {
         console.log(error)
     }
