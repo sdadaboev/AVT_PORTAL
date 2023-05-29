@@ -2,19 +2,20 @@ import figmaScheme from '../../models/projects/figmaProjectScheme.js'
 import path from 'path'
 export const projectFigma = async (req, res, next) => {
     try {
-        const { projectTitle, projectText } = req.body
+        const { projectTitle, projectText, projectLink } = req.body
         let uploadedfile = await req.uploadedFile
 
         const file = {
             projectTitle,
             projectText,
             projectPath: `http://127.0.0.1:3000/uploads/figma/${uploadedfile.originalname}`,
+            projectLink,
             projectFileName: uploadedfile.originalname,
         }
         const fileToMongoDB = await figmaScheme.create(file)
 
         console.log('file is uploaded: ', fileToMongoDB)
-        res.redirect('http://localhost:3000/project/figma')
+        res.redirect('http://localhost:3000/project-figma/figma')
     } catch (error) {
         console.log(error)
     }

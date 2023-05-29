@@ -189,3 +189,11 @@ ul.file-links-ul li {
     cursor: pointer;
     background-color: rgb(123, 250, 111, 0.3);
 }
+.projectLink {
+    padding: 10px;
+    border: 1px solid rgb(62, 173, 238);
+}
+.projectLinkBlock {
+    display: block;
+    margin-bottom: 10px;
+}

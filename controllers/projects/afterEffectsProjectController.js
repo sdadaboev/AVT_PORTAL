@@ -3,13 +3,14 @@ import afterEffectsScheme from '../../models/projects/afterEffectsProjectSheme.j
 import path from 'path'
 export const projectAfterEffects = async (req, res, next) => {
     try {
-        const { projectTitle, projectText } = req.body
+        const { projectTitle, projectText, projectLink } = req.body
         let uploadedfile = await req.uploadedFile
 
         const file = {
             projectTitle,
             projectText,
             projectPath: `http://127.0.0.1:3000/uploads/afterEffects/${uploadedfile.originalname}`,
+            projectLink,
             projectFileName: uploadedfile.originalname,
         }
         const fileToMongoDB = await afterEffectsScheme.create(file)

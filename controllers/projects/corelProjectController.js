@@ -3,13 +3,14 @@ import corelDraw from '../../models/projects/corelProjectScheme.js'
 import path from 'path'
 export const projectCorelDraw = async (req, res, next) => {
     try {
-        const { projectTitle, projectText } = req.body
+        const { projectTitle, projectText, projectLink } = req.body
         let uploadedfile = await req.uploadedFile
 
         const file = {
             projectTitle,
             projectText,
             projectPath: `http://127.0.0.1:3000/uploads/corel/${uploadedfile.originalname}`,
+            projectLink,
             projectFileName: uploadedfile.originalname,
         }
         const fileToMongoDB = await corelDraw.create(file)

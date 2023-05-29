@@ -2,13 +2,14 @@ import threeDSMAX from '../../models/projects/3dMaxProjectScheme.js'
 import path from 'path'
 export const project3DSMAX = async (req, res, next) => {
     try {
-        const { projectTitle, projectText } = req.body
+        const { projectTitle, projectText, projectLink } = req.body
         let uploadedfile = await req.uploadedFile
 
         const file = {
             projectTitle,
             projectText,
             projectPath: `http://127.0.0.1:3000/uploads/3dsmax/${uploadedfile.originalname}`,
+            projectLink,
             projectFileName: uploadedfile.originalname,
         }
         const fileToMongoDB = await threeDSMAX.create(file)

@@ -3,13 +3,14 @@ import illustratorScheme from '../../models/projects/illustratorProjectSheme.js'
 import path from 'path'
 export const projectIllustrator = async (req, res, next) => {
     try {
-        const { projectTitle, projectText } = req.body
+        const { projectTitle, projectText, projectLink } = req.body
         let uploadedfile = await req.uploadedFile
 
         const file = {
             projectTitle,
             projectText,
             projectPath: `http://127.0.0.1:3000/uploads/illustrator/${uploadedfile.originalname}`,
+            projectLink,
             projectFileName: uploadedfile.originalname,
         }
         const fileToMongoDB = await illustratorScheme.create(file)

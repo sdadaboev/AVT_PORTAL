@@ -62,6 +62,12 @@
                                     <p class="projectText">
                                         <%= file.projectText %>
                                     </p>
+                                    <a
+                                        target="_blank"
+                                        class="projectLinkBlock"
+                                        href="<%= file.projectLink %>"
+                                        ><%= file.projectLink %></a
+                                    >
                                     <button class="upload_button_see">
                                         <a
                                             href="<%= file.projectPath %>"
@@ -124,6 +130,13 @@
                             cols="30"
                             rows="10"
                         ></textarea>
+                        <input
+                            class="projectLink"
+                            type="url"
+                            id="projectlinkId"
+                            name="projectLink"
+                            placeholder="Havola kiriting"
+                        />
                         <input
                             class="button-upload-file-input"
                             name="projectFile"
