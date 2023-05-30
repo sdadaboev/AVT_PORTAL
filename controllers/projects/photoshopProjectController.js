@@ -16,7 +16,7 @@ export const projectPhotoshop = async (req, res, next) => {
         const fileToMongoDB = await photoshsopScheme.create(file)
 
         console.log('file is uploaded: ', fileToMongoDB)
-        res.redirect('http://localhost:3000/project-photoshop/photoshop')
+        res.redirect('/project-photoshop/photoshop')
     } catch (error) {
         console.log(error)
     }

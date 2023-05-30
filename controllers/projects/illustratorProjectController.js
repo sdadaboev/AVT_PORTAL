@@ -16,7 +16,7 @@ export const projectIllustrator = async (req, res, next) => {
         const fileToMongoDB = await illustratorScheme.create(file)
 
         console.log('file is uploaded: ', fileToMongoDB)
-        res.redirect('http://localhost:3000/project-illustrator/illustrator')
+        res.redirect('/project-illustrator/illustrator')
     } catch (error) {
         console.log(error)
     }

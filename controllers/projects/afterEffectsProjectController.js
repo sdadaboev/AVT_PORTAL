@@ -16,9 +16,7 @@ export const projectAfterEffects = async (req, res, next) => {
         const fileToMongoDB = await afterEffectsScheme.create(file)
 
         console.log('file is uploaded: ', fileToMongoDB)
-        res.redirect(
-            'http://localhost:3000/project-after-effects/after-effects',
-        )
+        res.redirect('/project-after-effects/after-effects')
     } catch (error) {
         console.log(error)
     }

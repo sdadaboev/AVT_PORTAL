@@ -16,7 +16,7 @@ export const projectCorelDraw = async (req, res, next) => {
         const fileToMongoDB = await corelDraw.create(file)
 
         console.log('file is uploaded: ', fileToMongoDB)
-        res.redirect('http://localhost:3000/project-corel/corel')
+        res.redirect('/project-corel/corel')
     } catch (error) {
         console.log(error)
     }

@@ -15,7 +15,7 @@ export const projectPremierPro = async (req, res, next) => {
         const fileToMongoDB = await premierProProjectScheme.create(file)
 
         console.log('file is uploaded: ', fileToMongoDB)
-        res.redirect('http://localhost:3000/project-premier-pro/premier-pro')
+        res.redirect('/project-premier-pro/premier-pro')
     } catch (error) {
         console.log(error)
     }

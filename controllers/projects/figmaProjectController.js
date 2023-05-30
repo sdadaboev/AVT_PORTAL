@@ -15,7 +15,7 @@ export const projectFigma = async (req, res, next) => {
         const fileToMongoDB = await figmaScheme.create(file)
 
         console.log('file is uploaded: ', fileToMongoDB)
-        res.redirect('http://localhost:3000/project-figma/figma')
+        res.redirect('/project-figma/figma')
     } catch (error) {
         console.log(error)
     }
