@@ -25,6 +25,6 @@ projectRouterCorel.post(
     },
     projectCorelDraw,
 )
-projectRouterCorel.get('/download/:id', downloadFileFromFrontCorel)
+projectRouterCorel.get('/download/corel/:id', downloadFileFromFrontCorel)
 
 export default projectRouterCorel

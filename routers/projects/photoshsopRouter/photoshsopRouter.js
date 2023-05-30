@@ -25,6 +25,6 @@ projectRouterPhotoshop.post(
     },
     projectPhotoshop,
 )
-projectRouterPhotoshop.get('/download/:id', downloadFileFromFrontPhotoshop)
+projectRouterPhotoshop.get('/download/photoshop/:id', downloadFileFromFrontPhotoshop)
 
 export default projectRouterPhotoshop

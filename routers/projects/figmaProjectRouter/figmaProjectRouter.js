@@ -25,6 +25,6 @@ projectRouterFigma.post(
     },
     projectFigma,
 )
-projectRouterFigma.get('/download/:id', downloadFileFromFrontFigma)
+projectRouterFigma.get('/download/figma/:id', downloadFileFromFrontFigma)
 
 export default projectRouterFigma

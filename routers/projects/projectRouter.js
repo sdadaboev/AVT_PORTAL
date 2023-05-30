@@ -30,7 +30,7 @@ projectRouter.post(
     },
     project3DSMAX,
 )
-projectRouter.get('/download/:id', downloadFileFromFront)
+projectRouter.get('/download/3dmax/:id', downloadFileFromFront)
 
 /////////////////////////////////        UNREAL ENGINE     ////////////////////////////////
 projectRouter.get('/unreal', getUploadedFilesToFrontUnreal)
@@ -48,7 +48,7 @@ projectRouter.post(
     },
     projectUnreal,
 )
-projectRouter.get('/download/:id', downloadFileFromFrontUnreal)
+projectRouter.get('/download/unreal/:id', downloadFileFromFrontUnreal)
 
 //////////////
 export default projectRouter

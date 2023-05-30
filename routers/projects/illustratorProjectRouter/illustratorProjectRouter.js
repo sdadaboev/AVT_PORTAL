@@ -24,6 +24,6 @@ projectRouterIllustrator.post(
     },
     projectIllustrator,
 )
-projectRouterIllustrator.get('/download/:id', downloadFileFromFrontIllustrator)
+projectRouterIllustrator.get('/download/illustrator/:id', downloadFileFromFrontIllustrator)
 
 export default projectRouterIllustrator

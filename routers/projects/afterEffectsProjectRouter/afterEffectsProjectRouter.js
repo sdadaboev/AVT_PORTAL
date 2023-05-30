@@ -29,7 +29,7 @@ projectRouterAfterEffects.post(
     projectAfterEffects,
 )
 projectRouterAfterEffects.get(
-    '/download/:id',
+    '/download/after/:id',
     downloadFileFromFrontAfterEffects,
 )
 

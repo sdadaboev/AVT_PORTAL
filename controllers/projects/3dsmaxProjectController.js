@@ -35,7 +35,7 @@ export const downloadFileFromFront = async (req, res, next) => {
     try {
         const fileID = req.params.id
         const foundedFileByID = await threeDSMAX.findOne({ _id: fileID })
-        console.log(foundedFileByID)
+        console.log('mana haqiqat', foundedFileByID)
         const filePath = path.join(
             process.cwd(),
             '/uploads/3dsmax',

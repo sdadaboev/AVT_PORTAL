@@ -24,6 +24,6 @@ projectRouterPremierPro.post(
     },
     projectPremierPro,
 )
-projectRouterPremierPro.get('/download/:id', downloadFileFromFrontPremierPRro)
+projectRouterPremierPro.get('/download/premier/:id', downloadFileFromFrontPremierPRro)
 
 export default projectRouterPremierPro
