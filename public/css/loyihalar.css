@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500&display=swap');
 body {
+    background-image: url('../img/Savin-NY-Website-Background-Web1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     box-sizing: border-box;
+
     margin: 0;
     padding: 0;
 }
@@ -9,12 +13,15 @@ a {
 }
 .file-links-ul {
     list-style: none;
-    border-right: 1px solid black;
+    /* border-right: 1px solid black; */
     padding: 0;
     display: flex;
     flex-direction: column;
-
-    max-width: 250px;
+    overflow: auto;
+    height: 70vh;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    width: 300px;
 }
 ul.file-links-ul li {
     /* border: 1px solid black; */
@@ -196,4 +203,34 @@ ul.file-links-ul li {
 .projectLinkBlock {
     display: block;
     margin-bottom: 10px;
+}
+.project-links-icon {
+    display: inline-block;
+
+    justify-self: end;
+    width: 25px;
+    height: 25px;
+}
+.project-links-flex {
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-between;
+    flex-direction: row;
+    transition: 0.3s;
+}
+.project-links-flex-li {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: Sora;
+}
+.project-links-flex:hover {
+    transform: translate(5px, 5%);
+    background-color: rgb(62, 173, 238, 0.4);
+}
+
+.navoiy-text {
+    margin: 0 auto;
+    opacity: 60%;
 }
